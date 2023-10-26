@@ -40,14 +40,16 @@ class MyHomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ItemOnePage(),
+                        builder: (context) => const ItemOnePage(),
                       ));
                 }),
             ListTile(
               title: const Text('Item Two'),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ItemTwoPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ItemTwoPage()));
               },
             )
           ],
@@ -63,7 +65,7 @@ class ItemOnePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Item One')),
+      appBar: AppBar(title: const Text('Item One')),
       body: const Center(
         child: Text('ITEM ONE SCREEN'),
       ),
@@ -77,7 +79,7 @@ class ItemTwoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Item Two')),
+      appBar: AppBar(title: const Text('Item Two')),
       body: const Center(
         child: Text('ITEM TWO SCREEN'),
       ),
